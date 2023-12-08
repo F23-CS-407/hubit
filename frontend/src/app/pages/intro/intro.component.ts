@@ -97,7 +97,7 @@ export class IntroComponent {
       this.registerForm.get('keyMatch')?.value;
   }
 
-  toggleVisibile() {
+  toggleVisible() {
     this.visible = !this.visible;
   }
 

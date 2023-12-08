@@ -27,7 +27,7 @@
           <mat-icon>
             <span class="material-symbols-outlined"> cancel </span>
           </mat-icon>
-        </button>
+        Clear UserName </button>
       </mat-form-field>
 
       <mat-form-field class="inputfield" appearance="outline">
@@ -48,15 +48,15 @@
           <mat-icon>
             <span class="material-symbols-outlined"> cancel </span>
           </mat-icon>
-        </button>
+        Clear Password</button>
         <button
           mat-icon-button
           type="button"
           matSuffix
-          (click)="toggleVisibile()"
+          (click)="toggleVisible()"
         >
           <mat-icon>{{ visible ? "visibility_off" : "visibility" }}</mat-icon>
-        </button>
+        Toggle Visibility</button>
       </mat-form-field>
 
       <div *ngIf="errorMessage" class="error-message">
@@ -65,8 +65,12 @@
 
       <button mat-icon-button type="submit" [disabled]="!loginForm.valid">
         <mat-icon>login-icon</mat-icon>
+      Log In</button>
+    
+      <h2> New to Hubit? </h2>
+      <button aria-label="Register" class="link-button" (click)="showRegistrationForm()">
       </button>
-    </form>
+</form>
 
     <!-- REGISTRATION FORM:  -->
     <form
@@ -87,7 +91,7 @@
           <mat-icon>
             <span class="material-symbols-outlined"> cancel </span>
           </mat-icon>
-        </button>
+        Clear Username </button>
       </mat-form-field>
       <div class="password-box">
         <mat-form-field class="inputfield" appearance="outline">
@@ -108,15 +112,15 @@
             <mat-icon>
               <span class="material-symbols-outlined"> cancel </span>
             </mat-icon>
-          </button>
+          Clear Password </button>
           <button
             mat-icon-button
             type="button"
             matSuffix
-            (click)="toggleVisibile()"
+            (click)="toggleVisible()"
           >
             <mat-icon>{{ visible ? "visibility_off" : "visibility" }}</mat-icon>
-          </button>
+          Toggle Visibility </button>
         </mat-form-field>
 
         <div class="password-criteria" *ngIf="!showLoginForm">
@@ -197,7 +201,7 @@
             <mat-icon>
               <span class="material-symbols-outlined"> cancel </span>
             </mat-icon>
-          </button>
+          Clear Password</button>
         </mat-form-field>
         <div class="password-criteria" *ngIf="!showLoginForm">
           <div
@@ -213,23 +217,17 @@
 
       <button mat-icon-button type="submit" [disabled]="!registerForm.valid">
         <mat-icon>person_add</mat-icon>
-      </button>
-    </form>
-
-    <!-- messages if login/registration fail -->
-    <h5 *ngIf="showLoginForm">
-      New to Hubit?
-      <button class="link-button" (click)="showRegistrationForm()">
-        Register
-      </button>
-    </h5>
-    <h5 *ngIf="!showLoginForm">
-      Already have an account?
+      Register </button>
+      <h2>Already have an account? </h2>
+  
       <button class="link-button" (click)="showLoginFormAgain()">
         Sign In
       </button>
-    </h5>
-  </div>
+  
+    </form>
+
+    <!-- messages if login/registration fail -->
+        
   <div class="footer">
     <h5>Hubit &copy; Fall 2023</h5>
   </div>
